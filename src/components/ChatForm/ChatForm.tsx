@@ -9,31 +9,43 @@ export const ChatForm = () => {
 
   const sendMessage = async () => {
     if (!author.trim() || !message.trim()) return;
-    try {
-      await axiosApi.post('/messages.json', {
-        author,
-        message,
-      });
-      setAuthor('');
-      setMessage('');
-    } catch (e) {
-      console.log(e);
-    }
+
+    await axiosApi.post('/messages.json', {
+      author,
+      message,
+    });
+
+    setAuthor('');
+    setMessage('');
   };
 
   return (
-    <div>
+    <div className={styles.formContainer}>
       <TextField
         label="Author"
+        variant="outlined"
+        size="small"
         value={author}
         onChange={(e) => setAuthor(e.target.value)}
+        className={styles.input}
       />
+
       <TextField
         label="Message"
+        variant="outlined"
+        size="small"
         value={message}
         onChange={(e) => setMessage(e.target.value)}
+        className={styles.input}
       />
-      <Button onClick={sendMessage}>Send</Button>
+
+      <Button
+        variant="contained"
+        onClick={sendMessage}
+        className={styles.button}
+      >
+        Send
+      </Button>
     </div>
   );
 };

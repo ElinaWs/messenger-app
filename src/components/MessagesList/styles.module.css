@@ -1,13 +1,38 @@
 .messageCard {
   display: flex;
   flex-direction: column;
-  border-radius: 20px;
+  border-radius: 16px;
   color:rgb(6, 15, 22);
   background: #d6e5ff;
-  gap: 10px;
+  gap: 4px;
+  padding: 16px;
 }
 .container {
   display: flex;
   flex-direction: column;
   gap: 8px;
+}
+
+.messageCard h5 {
+  margin: 0 0 5px;
+  font-size: 14px;
+  color: #555;
+}
+
+.messageCard p {
+  margin: 0 0 10px;
+  font-size: 16px;
+}
+
+.likeButton {
+  background-color: #a0c9f3;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.likeButton:hover {
+  background-color: #a0c9f3;
 }

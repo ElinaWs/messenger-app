@@ -56,9 +56,13 @@ export const MessagesList = () => {
           <div key={message.id} className={styles.messageCard}>
             <h5>Author: {message.author}</h5>
             <p>{message.message}</p>
-            <Button onClick={() => addLike(message)}>
-              Likes ({message.likes || 0})
+            <Button
+              className={styles.likeButton}
+              onClick={() => addLike(message)}
+            >
+              Like ({message.likes || 0})
             </Button>
+
           </div>
         ))
       }

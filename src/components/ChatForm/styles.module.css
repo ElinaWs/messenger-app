@@ -1,0 +1,20 @@
+.formContainer {
+  max-width: 800px;
+  margin: 20px auto;
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.input {
+  flex: 1;
+  background: #f1f3f5;
+  border-radius: 6px;
+}
+
+.button {
+  height: 40px;
+  border-radius: 16px;
+  text-transform: none;
+  font-weight: 500;
+}
